@@ -1,0 +1,10 @@
+Logical Reasoning:
+What day is the fourteenth of a given month?
+
+I. The last day of the month is a Wednesday.
+II. The third Saturday of the month was seventeenth.
+
+
+Option 'b' is correct, only data in statement II is sufficient to answer the question.
+For statement II, since the 17th was a Saturday, the 14th must be three days before that, on a Wednesday.
+For statement I, since we do not know if the month has 28, 30, or 31 days, we do not know if the 14th is fourteen, sixteen, or seventeen days before that Wednesday.
