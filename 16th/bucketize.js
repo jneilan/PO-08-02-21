@@ -1,5 +1,4 @@
-/*
-Weekly Coding Challenge: Word Bucket
+/* Weekly Coding Challenge: Word Bucket
 
 Write a function that divides a phrase into word buckets, containing <= n chars. 
 Only include full words inside each bucket.
@@ -13,11 +12,10 @@ bucketize("a b c d e", 2) ➞ ["a", "b", "c", "d", "e"]
 Notes
 Spaces count as one character.
 Trim beginning and end spaces for each word bucket (see final example).
-If buckets are too small to hold a single word, return an empty array: []
-*/
+If buckets are too small to hold a single word, return an empty array: []  */
 
 function bucketize(s,n) {
-	if (s.length == 0) return [];
+  if (s.length == 0) return [];
   
   let bucket = [];
   let words = s.split(' ');
@@ -30,18 +28,18 @@ function bucketize(s,n) {
     if (w.length > n) return []; // check if buckets are too small to hold a single word
     
     if (charCount == 0) { // start bucket
-    	currentString = w;
+      currentString = w;
       charCount = w.length;
     }
     
     else if (charCount + w.length + 1 <= n) { // add to existing bucket, if it fits
-    	currentString = currentString + ' ' + w;
+      currentString = currentString + ' ' + w;
       charCount += w.length + 1; // plus one to account for the space character
     }
     
     else { // end bucket and start a new bucket
-    	bucket.push(currentString);
-    	currentString = w;
+      bucket.push(currentString);
+      currentString = w;
       charCount = w.length;
     }
   }
